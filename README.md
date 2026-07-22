@@ -152,6 +152,7 @@ fault = (status_byte >> 4) & 0x0F   # Upper 4 bits
 * **`test_connection.py`**: Quick link diagnostics that pings the hand and tests read/write capability.
 * **`test_gestures.py`**: Runs through full safe test gesture cycles (open, close, ripple, peace,thumbs-up, pinch, fist).
 * **`interactive_control.py`**: Full keyboard-controlled CLI dashboard showing real-time feedback.
+* **`presentation_demo.py`**: A highly interactive demo script mapped to consecutive keyboard letters `a-p` to easily perform 16+ gestures (skipping the defective index finger).
 * **`linkedin_demo.py`**: Coordinated 5-finger demo sequence (Waves, Claw Grasp, Thumbs-up, adapted Victory gesture) bypassing motor 3 (Index) to prevent noise if that finger has mechanical jams.
 * **`troubleshoot_index.py`**: Targeted diagnostics tool for Motor 3 to determine mechanical stalls vs. sensor/electrical faults.
 * **`monitor_index_manual.py`**: Real-time encoder feedback checker that keeps holding torque disabled so you can move a finger manually and test sensor integrity.
