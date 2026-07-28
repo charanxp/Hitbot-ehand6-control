@@ -222,32 +222,32 @@ def counting_animation(driver):
     
     if not SKIP_INDEX_MODE:
         print("      1...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: CLOSED, RING: CLOSED, LITTLE: CLOSED}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: CLOSED, RING: CLOSED, LITTLE: CLOSED}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
         print("      2...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: OPEN, RING: CLOSED, LITTLE: CLOSED}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: OPEN, RING: CLOSED, LITTLE: CLOSED}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
         print("      3...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: OPEN, RING: OPEN, LITTLE: CLOSED}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: OPEN, RING: OPEN, LITTLE: CLOSED}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
         print("      4...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: OPEN, RING: OPEN, LITTLE: OPEN}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, INDEX: OPEN, MIDDLE: OPEN, RING: OPEN, LITTLE: OPEN}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
     else:
         print("      1...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, MIDDLE: OPEN, RING: CLOSED, LITTLE: CLOSED}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, MIDDLE: OPEN, RING: CLOSED, LITTLE: CLOSED}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
         print("      2...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, MIDDLE: OPEN, RING: OPEN, LITTLE: CLOSED}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, MIDDLE: OPEN, RING: OPEN, LITTLE: CLOSED}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
         print("      3...")
-        send_pose(driver, {THUMB_H: CLOSED, THUMB_V: CLOSED, MIDDLE: OPEN, RING: OPEN, LITTLE: OPEN}, speed=SNAP)
+        send_pose(driver, {THUMB_H: OPEN, THUMB_V: CLOSED, MIDDLE: OPEN, RING: OPEN, LITTLE: OPEN}, speed=SNAP)
         res = check_interrupts(driver, 1.0)
         if res: return res
         print("      4...")
@@ -386,7 +386,7 @@ def get_actions():
 
         ("h", "3️⃣   THREE",
          "Index + Middle + Ring up" if not SKIP_INDEX_MODE else "Middle + Ring + Little up",
-         "pose", {THUMB_H: CLOSED, THUMB_V: CLOSED, INDEX: OPEN if not SKIP_INDEX_MODE else CLOSED, MIDDLE: OPEN, RING: OPEN, LITTLE: CLOSED if not SKIP_INDEX_MODE else OPEN},
+         "pose", {THUMB_H: OPEN, THUMB_V: CLOSED, INDEX: OPEN if not SKIP_INDEX_MODE else CLOSED, MIDDLE: OPEN, RING: OPEN, LITTLE: CLOSED if not SKIP_INDEX_MODE else OPEN},
          FAST, FIRM),
 
         ("i", "👆  POINT",             "Index pointing forward" if not SKIP_INDEX_MODE else "Middle pointing forward",
